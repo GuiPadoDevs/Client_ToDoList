@@ -1,0 +1,47 @@
+.app.light {
+    background-color: #F4F5F7; /* Light theme background */
+    color: #2C2C2C; /* Text color */
+}
+
+.app.dark {
+    background-color: #1E1E2F; /* Dark theme background */
+    color: #E1E1E1; /* Text color */
+}
+
+.theme-toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #1b64af; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.theme-toggle-button:hover {
+    background-color: #6eb1f3; /* Highlight color */
+}
+
+html, body, #root, .app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

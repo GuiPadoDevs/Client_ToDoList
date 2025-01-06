@@ -1,38 +1,316 @@
-.App {
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F4F5F7; /* Light theme background */
+  margin: 0;
+  padding: 0;
+  color: #2C2C2C; /* Text color */
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  color: #4C4C6C; /* Secondary color */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #B0BEC5; /* Complement color */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1b64af; /* Primary color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6eb1f3; /* Highlight color */
+}
+
+button:disabled {
+  background-color: #B0BEC5; /* Complement color */
+}
+
+.error-message {
+  color: red;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Login and Register specific styles */
+.login-section, .register-section {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Task list styles */
+.task-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task-card {
+  background-color: #fff; /* Light theme background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.task-card h3 {
+  margin-top: 0;
+  color: #4C4C6C; /* Secondary color */
+}
+
+.task-card p {
+  margin: 5px 0;
+  color: #2C2C2C; /* Text color */
+}
+
+/* Dark theme styles for task cards */
+.task-list.dark-mode .task-card {
+  background-color: #2C3E50; /* Dark theme background */
+  border: 1px solid #4A6572; /* Complement color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.task-list.dark-mode .task-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.task-list.dark-mode .task-card h3,
+.task-list.dark-mode .task-card p {
+  color: #E1E1E1; /* Text color */
+}
+
+/* Dark theme styles */
+body.dark-mode {
+  background-color: #1E1E2F; /* Dark theme background */
+  color: #E1E1E1; /* Text color */
+}
+
+.container.dark-mode {
+  background-color: #2C3E50; /* Secondary color */
+}
+
+h2.dark-mode {
+  color: #E1E1E1; /* Text color */
+}
+
+input.dark-mode {
+  background-color: #2C3E50; /* Secondary color */
+  color: #E1E1E1; /* Text color */
+  border: 1px solid #4A6572; /* Complement color */
+}
+
+button.dark-mode {
+  background-color: #1b64af; /* Primary color */
+}
+
+button.dark-mode:hover {
+  background-color: #6eb1f3; /* Highlight color */
+}
+
+button.dark-mode:disabled {
+  background-color: #4A6572; /* Complement color */
+}
+
+.task-list.dark-mode .task-card {
+  background-color: #2C3E50; /* Secondary color */
+  border: 1px solid #4A6572; /* Complement color */
+}
+
+.task-list.dark-mode .task-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.task-list.dark-mode .task-card h3,
+.task-list.dark-mode .task-card p {
+  color: #E1E1E1; /* Text color */
+}
+
+/* Add these styles for the modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.create-task-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #1b64af;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.create-task-button:hover {
+  background-color: #6eb1f3;
+}
+
+.close-modal-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ff4c4c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-modal-button:hover {
+  background-color: #ff7b7b;
+}
+
+.update-task-button {
+  background-color: #1b64af; /* Primary color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.update-task-button:hover {
+  background-color: #6eb1f3; /* Highlight color */
+}
+
+.delete-task-button {
+  background-color: #ff4c4c; /* Red color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-task-button:hover {
+  background-color: #ff7b7b; /* Highlight color */
+}
+
+.task-card-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.update-task-button,
+.delete-task-button {
+  flex: 1;
+}
+
+/* App.css */
+
+.app.light {
+  background-color: #F4F5F7; /* Light theme background */
+  color: #2C2C2C; /* Text color */
+}
+
+.app.dark {
+  background-color: #1E1E2F; /* Dark theme background */
+  color: #E1E1E1; /* Text color */
+}
+
+.theme-toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #1b64af; /* Primary color */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.theme-toggle-button:hover {
+  background-color: #6eb1f3; /* Highlight color */
+}
+
+html, body, #root, .app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }

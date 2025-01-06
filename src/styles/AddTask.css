@@ -1,0 +1,37 @@
+/* AddTask.css */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #4C4C6C; /* Secondary color */
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #B0BEC5; /* Complement color */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button.save-task-button {
+    padding: 10px;
+    background-color: #1b64af; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.save-task-button:hover {
+    background-color: #6eb1f3; /* Highlight color */
+}

@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# 🇺🇸 To-Do List - Enhance Your Productivity
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **full-stack To-Do List project** developed entirely from scratch to consolidate and showcase my knowledge in software development. 🚀  
+The project is divided into two repositories:
+- **Frontend**: React-based user interface (this repository).
+- **Backend**: API built with Node.js and MongoDB, which you can find [here](https://github.com/GuiPadoDevs/Server_ToDoList).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 Project Highlights | Destaques do Projeto
 
-### `npm start`
+- **Dark and Light Themes** 🌙☀️: Easily switch between themes to match your preference.
+- **User-Friendly Design** 🎨: A clean interface designed to streamline task management for developers or anyone needing a reliable task manager.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Future Improvements | Melhorias Futuras
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Language Support** 🌍: Add the ability to switch between multiple languages.
+- **Analytical Dashboard** 📊: Provide users with insights into their task completion trends.
+- **Export Options** 📂: Allow exporting task data in Excel or PDF formats.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Feel free to explore, contribute, and provide feedback to help this project grow! 😊
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🇧🇷 Lista de Tarefas - Aumente sua Produtividade
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este é um projeto **full-stack de lista de tarefas** desenvolvido totalmente do zero para consolidar e demonstrar meu conhecimento em desenvolvimento de software. 🚀  
+O projeto está dividido em dois repositórios:
+- **Frontend**: Interface de usuário baseada em React (este repositório).
+- **Backend**: API construída com Node.js e MongoDB, que você pode encontrar [aqui](https://github.com/GuiPadoDevs/Server_ToDoList).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🌟 Destaques do Projeto
+- **Temas Escuro e Claro** 🌙☀️: Troque facilmente entre os temas para combinar com sua preferência.
+- **Design Intuitivo** 🎨: Uma interface limpa projetada para otimizar o gerenciamento de tarefas para desenvolvedores ou qualquer pessoa que precise de um gerente de tarefas confiável.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Melhorias Futuras
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Suporte a Idiomas** 🌍: Adicionar a capacidade de trocar entre vários idiomas.
+- **Painel Analítico** 📊: Fornecer aos usuários insights sobre as tendências de conclusão de tarefas.
+- **Opções de Exportação** 📂: Permitir a exportação dos dados de tarefas nos formatos Excel ou PDF.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Fique à vontade para explorar, contribuir e dar feedback para ajudar este projeto a crescer! 😊  

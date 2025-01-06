@@ -1,0 +1,45 @@
+body.dark-mode {
+    background-color: #1E1E2F; /* Dark theme background */
+    color: #E1E1E1; /* Text color */
+}
+
+.container.dark-mode {
+    background-color: #2C3E50; /* Secondary color */
+}
+
+h2.dark-mode {
+    color: #E1E1E1; /* Text color */
+}
+
+input.dark-mode {
+    background-color: #2C3E50; /* Secondary color */
+    color: #E1E1E1; /* Text color */
+    border: 1px solid #4A6572; /* Complement color */
+}
+
+button.dark-mode {
+    background-color: #1b64af; /* Primary color */
+}
+
+button.dark-mode:hover {
+    background-color: #6eb1f3; /* Highlight color */
+}
+
+button.dark-mode:disabled {
+    background-color: #4A6572; /* Complement color */
+}
+
+.task-list.dark-mode .task-card {
+    background-color: #2C3E50; /* Dark theme background */
+    border: 1px solid #4A6572; /* Complement color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.task-list.dark-mode .task-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.task-list.dark-mode .task-card h3,
+.task-list.dark-mode .task-card p {
+    color: #E1E1E1; /* Text color */
+}
