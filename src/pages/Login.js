@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import api from "../utils/api";
-import '../styles/Login.css'; // Import the new CSS file
+import '../styles/Login.css';
 
 const Login = ({ onLogin, onRegisterClick }) => {
     const [usuario, setUsuario] = useState("");

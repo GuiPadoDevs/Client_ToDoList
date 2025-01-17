@@ -6,6 +6,7 @@ import '../styles/Register.css';
 const Register = ({ onRegister, onLoginClick }) => {
     const [usuario, setUsuario] = useState("");
     const [senha, setSenha] = useState("");
+    const [confirmeSenha, setConfirmeSenha] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
@@ -16,7 +17,8 @@ const Register = ({ onRegister, onLoginClick }) => {
         try {
             const response = await axios.post("https://server-to-do-list.vercel.app/api/auth/register", {
                 user: usuario,
-                password: senha
+                password: senha,
+                confirm: confirmeSenha,
             });
 
             if (response.data._id) {
@@ -48,6 +50,12 @@ const Register = ({ onRegister, onLoginClick }) => {
                     placeholder="Senha"
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
+                />
+                <input
+                    type="password"
+                    placeholder="Confirme a senha"
+                    value={confirmeSenha}
+                    onChange={(e) => setConfirmeSenha(e.target.value)}
                 />
                 <button className="register-button" onClick={handleRegister} disabled={loading}>
                     {loading ? "Registrando..." : "Register"}
