@@ -13,7 +13,7 @@ const Login = ({ onLogin, onRegisterClick }) => {
         setError("");
 
         try {
-            const response = await api.post("i/auth/login", {
+            const response = await api.post("/auth/login", {
                 user: usuario,
                 password: senha
             });
