@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../utils/api";
 import '../styles/Login.css'; // Import the new CSS file
 
 const Login = ({ onLogin, onRegisterClick }) => {
@@ -13,7 +13,7 @@ const Login = ({ onLogin, onRegisterClick }) => {
         setError("");
 
         try {
-            const response = await axios.post("https://server-to-do-list-guipadodevs-projects.vercel.app/api/auth/login", {
+            const response = await api.post("i/auth/login", {
                 user: usuario,
                 password: senha
             });

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import '../styles/AddTask.css';
 
 const AddTask = ({ task, onTaskAddedOrUpdated }) => {
@@ -38,7 +38,7 @@ const AddTask = ({ task, onTaskAddedOrUpdated }) => {
 
         try {
             if (task) {
-                const response = await axios.put('http://server-to-do-list.vercel.app/api/tasks/task', {
+                const response = await api.put('/tasks/task', {
                     id: task._id,
                     ...taskData
                 }, {
@@ -47,7 +47,7 @@ const AddTask = ({ task, onTaskAddedOrUpdated }) => {
                     }
                 });
             } else {
-                const response = await axios.post('http://server-to-do-list.vercel.app/api/tasks/task', taskData, {
+                const response = await api.post('/tasks/task', taskData, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
