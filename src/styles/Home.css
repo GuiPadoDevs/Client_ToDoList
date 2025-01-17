@@ -155,7 +155,7 @@
 }
 
 .tabs button {
-    background-color: #f1f1f1;
+    background-color: #7692af;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -168,5 +168,5 @@
 }
 
 .tabs button:hover {
-    background-color: #ddd;
+    background-color: #7692af;
 }
