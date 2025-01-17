@@ -22,6 +22,7 @@ The project is divided into two repositories:
 
 Feel free to explore, contribute, and provide feedback to help this project grow! 😊
 
+Link to the deployed project: [To-Do List](https://todolistguipadodevs.vercel.app)
 
 # 🇧🇷 Lista de Tarefas - Aumente sua Produtividade
 
@@ -45,3 +46,4 @@ O projeto está dividido em dois repositórios:
 ---
 
 Fique à vontade para explorar, contribuir e dar feedback para ajudar este projeto a crescer! 😊  
+Link para o projeto implantado: [Lista de Tarefas](https://todolistguipadodevs.vercel.app)

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Layout from './Layout';
 import { ThemeProvider } from './ThemeContext';
 import './styles/App.css';
+import Footer from './components/Footer';
 
 const App = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -31,6 +32,7 @@ const App = () => {
                     ) : (
                         <Home />
                     )}
+                    <Footer />
                 </Layout>
             </div>
         </ThemeProvider>
