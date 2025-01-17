@@ -80,6 +80,7 @@
 }
 
 .create-task-button {
+    margin-bottom: 60px;
     position: fixed;
     bottom: 20px;
     right: 20px;
