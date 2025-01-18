@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 import Modal from 'react-modal';
-import '../styles/Home.css'; // Importar o novo arquivo CSS
+import '../styles/Home.css';
 import AddTask from './AddTask';
 import { useTheme } from '../ThemeContext';
+
+import TaskList from '../components/TaskList';
+import Tabs from '../components/Tabs';
 
 Modal.setAppElement('#root');
 
@@ -95,26 +98,14 @@ const Home = () => {
     return (
         <div className={`task-list-container ${theme === 'dark' ? 'dark-mode' : ''}`}>
             <h2>Task List</h2>
-            <div className="tabs">
-                <button onClick={() => setShowCompleted(false)} className={!showCompleted ? 'active' : ''}>Active Tasks</button>
-                <button onClick={() => setShowCompleted(true)} className={showCompleted ? 'active' : ''}>Completed Tasks</button>
-            </div>
-            <div className={`task-list ${theme === 'dark' ? 'dark-mode' : ''}`}>
-                {(showCompleted ? completedTasks : tasks).map(task => (
-                    <div key={task._id} className="task-card">
-                        <h3>{task.name}</h3>
-                        <p>{task.description}</p>
-                        <p>Priority: {task.priority}</p>
-                        <p>Type: {task.type}</p>
-                        <p>Term: {formatDate(task.term)}</p>
-                        <div className="task-card-buttons">
-                            {!showCompleted && <button onClick={() => handleUpdateTask(task)} className="update-task-button">Update</button>}
-                            <button onClick={() => handleDeleteTask(task._id)} className="delete-task-button">Delete</button>
-                            {!showCompleted && <button onClick={() => handleCompleteTask(task._id)} className="complete-task-button">Complete</button>}
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <Tabs showCompleted={showCompleted} setShowCompleted={setShowCompleted} />
+            <TaskList
+                tasks={showCompleted ? completedTasks : tasks}
+                onUpdate={handleUpdateTask}
+                onDelete={handleDeleteTask}
+                onComplete={handleCompleteTask}
+                showCompleted={showCompleted}
+            />
             <button onClick={openModal} className="create-task-button">+</button>
             <Modal
                 isOpen={modalIsOpen}
