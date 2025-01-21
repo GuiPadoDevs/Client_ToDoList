@@ -179,16 +179,16 @@
 }
 
 /* Dark theme styles */
-.task-list.dark-mode .task-card {
+.task-card.dark-mode .task-card {
     background-color: #2C3E50; /* Secondary color */
     border: 1px solid #4A6572; /* Complement color */
 }
 
-.task-list.dark-mode .task-card:hover {
+.task-card.dark-mode .task-card:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.task-list.dark-mode .task-card h3,
-.task-list.dark-mode .task-card p {
+.task-card.dark-mode .task-card h3,
+.task-card.dark-mode .task-card p {
     color: #E1E1E1; /* Text color */
 }
