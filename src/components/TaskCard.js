@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Home.css'
+import '../styles/Home.css';
 
-const TaskCard = ({ task, onUpdate, onDelete, onComplete, showCompleted }) => {
+const TaskCard = ({ task, onUpdate, onDelete, onComplete, showCompleted, theme }) => {
     const formatDate = (dateString) => {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('pt-BR', options);

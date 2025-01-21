@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import '../styles/Home.css';
 import AddTask from './AddTask';
 import { useTheme } from '../ThemeContext';
-
 import TaskList from '../components/TaskList';
 import Tabs from '../components/Tabs';
 
@@ -88,11 +87,6 @@ const Home = () => {
 
     const closeModal = () => {
         setModalIsOpen(false);
-    };
-
-    const formatDate = (dateString) => {
-        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        return new Date(dateString).toLocaleDateString('pt-BR', options);
     };
 
     return (
