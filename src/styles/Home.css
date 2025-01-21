@@ -13,10 +13,6 @@
     background-color: #F4F5F7;
 }
 
-.dark-mode .task-list-content {
-    background-color: #333; /* Cor de fundo do tema escuro */
-}
-
 .task-list {
     display: flex;
     flex-wrap: wrap;
@@ -180,4 +176,19 @@
 
 .tabs button:hover {
     background-color: #7692af;
+}
+
+/* Dark theme styles */
+.task-list.dark-mode .task-card {
+    background-color: #2C3E50; /* Secondary color */
+    border: 1px solid #4A6572; /* Complement color */
+}
+
+.task-list.dark-mode .task-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.task-list.dark-mode .task-card h3,
+.task-list.dark-mode .task-card p {
+    color: #E1E1E1; /* Text color */
 }
