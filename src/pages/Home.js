@@ -99,13 +99,16 @@ const Home = () => {
         <div className={`task-list-container ${theme === 'dark' ? 'dark-mode' : ''}`}>
             <h2>Task List</h2>
             <Tabs showCompleted={showCompleted} setShowCompleted={setShowCompleted} />
-            <TaskList
-                tasks={showCompleted ? completedTasks : tasks}
-                onUpdate={handleUpdateTask}
-                onDelete={handleDeleteTask}
-                onComplete={handleCompleteTask}
-                showCompleted={showCompleted}
-            />
+            <div className="task-list-content">
+                <TaskList
+                    tasks={showCompleted ? completedTasks : tasks}
+                    onUpdate={handleUpdateTask}
+                    onDelete={handleDeleteTask}
+                    onComplete={handleCompleteTask}
+                    showCompleted={showCompleted}
+                    theme={theme}
+                />
+            </div>
             <button onClick={openModal} className="create-task-button">+</button>
             <Modal
                 isOpen={modalIsOpen}

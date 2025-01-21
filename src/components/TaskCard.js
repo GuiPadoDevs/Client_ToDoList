@@ -8,7 +8,7 @@ const TaskCard = ({ task, onUpdate, onDelete, onComplete, showCompleted }) => {
     };
 
     return (
-        <div className="task-card">
+        <div className={`task-card ${theme === 'dark' ? 'dark-mode' : ''}`}>
             <h3>{task.name}</h3>
             <p>{task.description}</p>
             <p>Priority: {task.priority}</p>

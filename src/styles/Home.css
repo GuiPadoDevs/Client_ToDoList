@@ -6,6 +6,12 @@
     padding: 20px;
 }
 
+.task-list-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+
 .task-list {
     display: flex;
     flex-wrap: wrap;
