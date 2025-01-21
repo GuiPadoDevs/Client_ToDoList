@@ -1,14 +1,14 @@
 import React from 'react';
-import '../styles/Home.css';
+import '../styles/Home.css'
 
-const TaskCard = ({ task, onUpdate, onDelete, onComplete, showCompleted, theme }) => {
+const TaskCard = ({ task, onUpdate, onDelete, onComplete, showCompleted }) => {
     const formatDate = (dateString) => {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('pt-BR', options);
     };
 
     return (
-        <div className={`task-card ${theme === 'dark' ? 'dark-mode' : ''}`}>
+        <div className="task-card">
             <h3>{task.name}</h3>
             <p>{task.description}</p>
             <p>Priority: {task.priority}</p>

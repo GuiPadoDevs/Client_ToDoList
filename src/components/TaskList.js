@@ -2,7 +2,7 @@ import React from 'react';
 import TaskCard from './TaskCard';
 import '../styles/Home.css';
 
-const TaskList = ({ tasks, onUpdate, onDelete, onComplete, showCompleted, theme }) => {
+const TaskList = ({ tasks, onUpdate, onDelete, onComplete, showCompleted }) => {
     return (
         <div className="task-list">
             {tasks.map(task => (
@@ -13,7 +13,6 @@ const TaskList = ({ tasks, onUpdate, onDelete, onComplete, showCompleted, theme 
                     onDelete={onDelete}
                     onComplete={onComplete}
                     showCompleted={showCompleted}
-                    theme={theme}
                 />
             ))}
         </div>

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 import Modal from 'react-modal';
 import '../styles/Home.css';
-import '../styles/DarkMode.css';
 import AddTask from './AddTask';
 import { useTheme } from '../ThemeContext';
+
 import TaskList from '../components/TaskList';
 import Tabs from '../components/Tabs';
 
@@ -90,20 +90,22 @@ const Home = () => {
         setModalIsOpen(false);
     };
 
+    const formatDate = (dateString) => {
+        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+        return new Date(dateString).toLocaleDateString('pt-BR', options);
+    };
+
     return (
         <div className={`task-list-container ${theme === 'dark' ? 'dark-mode' : ''}`}>
             <h2>Task List</h2>
             <Tabs showCompleted={showCompleted} setShowCompleted={setShowCompleted} />
-            <div className={`task-list-content ${theme === 'dark' ? 'dark-mode' : ''}`}>
-                <TaskList
-                    tasks={showCompleted ? completedTasks : tasks}
-                    onUpdate={handleUpdateTask}
-                    onDelete={handleDeleteTask}
-                    onComplete={handleCompleteTask}
-                    showCompleted={showCompleted}
-                    theme={theme}
-                />
-            </div>
+            <TaskList
+                tasks={showCompleted ? completedTasks : tasks}
+                onUpdate={handleUpdateTask}
+                onDelete={handleDeleteTask}
+                onComplete={handleCompleteTask}
+                showCompleted={showCompleted}
+            />
             <button onClick={openModal} className="create-task-button">+</button>
             <Modal
                 isOpen={modalIsOpen}
