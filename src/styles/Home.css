@@ -10,6 +10,11 @@
     flex: 1;
     overflow-y: auto;
     padding-bottom: 60px;
+    background-color: #F4F5F7;
+}
+
+.dark-mode .task-list-content {
+    background-color: #333; /* Cor de fundo do tema escuro */
 }
 
 .task-list {

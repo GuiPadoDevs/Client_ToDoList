@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 import Modal from 'react-modal';
 import '../styles/Home.css';
+import '../styles/DarkMode.css';
 import AddTask from './AddTask';
 import { useTheme } from '../ThemeContext';
 import TaskList from '../components/TaskList';
@@ -93,7 +94,7 @@ const Home = () => {
         <div className={`task-list-container ${theme === 'dark' ? 'dark-mode' : ''}`}>
             <h2>Task List</h2>
             <Tabs showCompleted={showCompleted} setShowCompleted={setShowCompleted} />
-            <div className="task-list-content">
+            <div className={`task-list-content ${theme === 'dark' ? 'dark-mode' : ''}`}>
                 <TaskList
                     tasks={showCompleted ? completedTasks : tasks}
                     onUpdate={handleUpdateTask}
